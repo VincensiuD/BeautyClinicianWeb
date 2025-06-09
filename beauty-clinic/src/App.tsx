@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { NavBar } from './component/NavBar';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Homepage, Clinicians, BookingTreatment } from './pages';
+import { BookNowBtn } from './component';
 
-function App() {
+export const App = () => {
+  const location = useLocation();
+
+  const hideBookNowLocations = ['/booking', '/admin'];
+  const shouldShowButton = !hideBookNowLocations.includes(location.pathname);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      {shouldShowButton && <BookNowBtn />}
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/clinicians" element={<Clinicians />} />
+        <Route path="/booking" element={<BookingTreatment />} />
+      </Routes>
+    </>
   );
-}
+};
 
-export default App;
