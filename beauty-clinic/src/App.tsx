@@ -3,7 +3,7 @@ import './App.css';
 import { NavBar } from './component/NavBar';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Homepage, Clinicians, BookingTreatment } from './pages';
-import { BookNowBtn } from './component';
+import { BookNowBtn, Footer } from './component';
 
 export const App = () => {
   const location = useLocation();
@@ -19,6 +19,7 @@ export const App = () => {
         <Route path="/clinicians" element={<Clinicians />} />
         <Route path="/booking" element={<BookingTreatment />} />
       </Routes>
+      <Footer/>
     </>
   );
 };

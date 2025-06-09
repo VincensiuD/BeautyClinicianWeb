@@ -39,10 +39,10 @@
 }
 
 :root {
-  --bg-main: rgba(4, 224, 208, 1);
+  --bg-main: rgb(153, 226, 218);
 
   /* Text colors */
-  --text-main: rgba(24, 48, 96, 1);
+  --text-main: rgb(14, 28, 55);
   --text-muted: rgba(90, 110, 130, 0.7);
   --white: #ffffff;
 
@@ -54,6 +54,100 @@
   --contrast: #ff6b6b;
 }
 
+h1 {
+  padding-top: 4vh;
+  color: var(--text-main);
+  font-size: 5rem;
+}
+
+h2 {
+  padding-top: 1vh;
+  color: var(--text-main);
+  font-size: 3rem;
+}
+
+h3 {
+   font-size: 2rem;
+}
+
+p {
+  color: var(--text-main);
+  font-size: 1.2em;
+}
+
+.book-now-span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/*NAVS*/
+
+.nav-bar {
+  background-color: rgba(64, 224, 208);
+  height: 3rem;
+  z-index: 10;
+}
+
+/* FOOTERS */
+
+footer {
+  background-color: rgba(64, 224, 208);
+  color: var(--text-main);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: navy;
+  margin: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: none;
+  color: var(--contrast)
+}
+
+.footer-social a {
+  margin: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer-social a:hover {
+  color: var(--contrast);
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+@media (min-width: 600px) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*Homepage*/
 
 .main-video-container {
   position: relative;
@@ -62,12 +156,16 @@
   overflow: hidden;
 }
 
+.home-main-div {
+  background-color: var(--bg-main);
+}
+
 .main-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .video-overlay {
@@ -76,13 +174,63 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(64, 224, 208, 0.2);
+  background-color: rgba(64, 224, 208, 0.6);
   z-index: 1;
+  text-align: center;
+
 }
 
-.nav-bar {
-  background-color: rgba(64, 224, 208);
-  height: 3rem;
+.home-slogan {
+  font-size: 2.4rem;
+  text-align: center;
+
+  /* padding: 1rem; */
+}
+
+.about-us-div {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+}
+
+.about-us-text {
+  padding-inline: 10px;
+  text-align: justify;
+  font-size: 1.2rem;
+
+}
+
+.about-us-image {
+  padding-inline: 10px;
+  width: 40vw;
+}
+
+.locations-main-div {
+  padding-top: 4vh;
+  text-align: center;
+}
+
+.locations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -4vh;
+}
+
+.treatments-main-div {
+  align-content: center;
+  text-align: center;
+}
+
+.treatments {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 a {
@@ -102,10 +250,16 @@ a:hover {
   color: var(--text-main)
 }
 
+.link-text-login {
+  position: absolute;
+  left: 81vw;
+  top: -1.1vh;
+}
+
 .book-now-btn {
   background-color: rgba(24, 48, 96) !important;
   color: white;
-  width: 8rem;
+  width: 9rem;
   height: 3rem;
   top: 0;
   position: fixed;
@@ -117,8 +271,39 @@ a:hover {
   z-index: 999;
   cursor: pointer;
   transition: background-color 0.4s ease;
+  text-transform: uppercase;
 }
 
 .book-now-btn:hover {
   background-color: rgba(255, 0, 0, 1);
+}
+
+/* TreatmentCard*/
+
+.treatment-card-div {
+  display: block;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: inherit;
+  width: 20vw;
+  height: 30vw;
+  margin: auto;
+}
+
+.treatment-card-a {
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  padding: 2px;
+}
+
+.treatment-card-image {
+  object-fit: cover;
+  width: 15vw;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
 }
