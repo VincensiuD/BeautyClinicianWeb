@@ -24,7 +24,7 @@ export const ClinicianProfile: React.FC<ClinicianProfileProps> = ({
         <img src={getImageByName(name)} alt={`${name}-image`} className="profile-image" />
       </div>
       <div className="profile-text-div">
-        <p className="profile-title">{name} - {title.substring(2)}</p>
+        <p className="profile-title">{name} - {title}</p>
         <p className="profile-description">{description}</p>
       </div>
     </div>

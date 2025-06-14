@@ -17,6 +17,7 @@ export const Clinicians = () => {
     const data = await response.json();
     if (data) {
       setClinicians(data);
+      console.info(data);
     }
   }
 
