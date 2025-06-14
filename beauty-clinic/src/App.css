@@ -55,9 +55,9 @@
 }
 
 h1 {
-  padding-top: 4vh;
   color: var(--text-main);
   font-size: 5rem;
+  text-align: center;
 }
 
 h2 {
@@ -67,7 +67,7 @@ h2 {
 }
 
 h3 {
-   font-size: 2rem;
+  font-size: 2rem;
 }
 
 p {
@@ -80,7 +80,13 @@ p {
   cursor: pointer;
 }
 
+.std-background {
+  background-color: var(--bg-main);
+}
 
+.no-margin{
+  margin: 0px;
+}
 
 /*NAVS*/
 
@@ -169,6 +175,7 @@ footer {
 }
 
 .video-overlay {
+  padding-top: 4vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -306,4 +313,61 @@ a:hover {
   border-radius: 8px;
   display: block;
   margin: auto;
+}
+
+/* Clinicians page*/
+
+.clinicians-main-div {
+  background-color: var(--bg-main);
+}
+
+
+/*CliniciansProfile*/
+.profile-main {
+  display: flex;
+  align-items: center;
+  padding-inline: 10rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-radius: 40px;
+  margin-top: 4vh;
+}
+
+.clinician-opening-div{
+  margin: 2vw;
+}
+
+.image-left {
+  flex-direction: row;
+  background-color: rgba(120, 226, 218);
+}
+
+.image-right {
+  flex-direction: row-reverse;
+}
+
+.profile-image-div {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+.profile-text-div {
+  flex: 1;
+}
+
+.profile-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-description {
+  font-size: 1rem;
+  color: var(--text-main)
 }

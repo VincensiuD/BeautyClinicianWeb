@@ -1,7 +1,7 @@
 import mainVideo from "../assets/mainVideo.mp4";
 import aboutUsImage from "../assets/aboutUsImage.png";
 import { useNavigate } from "react-router-dom";
-import { TreatmentCard } from "../component/TreatmentCard";
+import { TreatmentCard } from "../components/TreatmentCard";
 import massage from "../assets/Massage.png";
 
 export const Homepage = () => {
