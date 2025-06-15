@@ -1,0 +1,7 @@
+export enum Role {
+  IT = 8228,
+  CLINICIAN = 8802,
+  ADMINISTRATOR = 8803,
+  FOUNDER = 8804,
+  CLIENT = 1008
+}
