@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ClinicianProfile } from "../components/CliniciansProfile";
+import { customFetch } from "../services/customFetch";
 
 export interface Clinician {
   ID: number;
@@ -13,8 +14,7 @@ export const Clinicians = () => {
   const [clinicians, setClinicians] = useState<Clinician[]>([]);
 
   async function fetchData() {
-    const response = await fetch("http://127.0.0.1:3000/api/clinicians");
-    const data = await response.json();
+    const data = await customFetch("http://127.0.0.1:3000/api/clinicians");
     if (data) {
       setClinicians(data);
       console.info(data);
