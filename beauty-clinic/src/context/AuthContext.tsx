@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   ): Promise<boolean> {
     try {
       const data = await customFetch(
-        "http://127.0.0.1:3000/api/login",
+        "http://localhost:3000/api/login",
         { mobileNumber, password },
         "POST"
       );

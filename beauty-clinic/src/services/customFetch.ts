@@ -20,7 +20,7 @@ export async function customFetch(
     credentials: 'include',
     headers: {
       "Content-Type": "application/json",
-      Accept: "application/json",
+       Accept: "application/json",
     },
     signal: controller.signal,
   };
@@ -32,6 +32,7 @@ export async function customFetch(
     const response = await fetch(url, fetchOptions);
 
     const data = await response.json();
+    data.status = response.status;
     return data;
   } catch (error) {
     if ((error as Error).name === "AbortError") {
