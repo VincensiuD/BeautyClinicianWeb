@@ -3,3 +3,4 @@ export * from './Homepage'
 export * from './BookingTreatment';
 export * from './Login'
 export * from './Landing'
+export * from './Staff'
