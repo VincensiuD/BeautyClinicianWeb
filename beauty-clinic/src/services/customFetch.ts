@@ -29,7 +29,7 @@ export async function customFetch(
     if (body && method !== "GET") {
     fetchOptions.body = JSON.stringify(body);
   }
-    const response = await fetch(url, fetchOptions);
+    const response = await fetch(`http://localhost:3000/${url}`, fetchOptions);
 
     const data = await response.json();
     data.status = response.status;

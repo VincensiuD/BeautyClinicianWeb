@@ -8,7 +8,7 @@ export const Staff = () => {
 
   useEffect(() => {
     async function initFetch() {
-      const access = await customFetch("http://localhost:3000/api/adminOnly");
+      const access = await customFetch("api/adminOnly");
       
       access.status !== 200 ? navigate('/landing') : null;
     }
