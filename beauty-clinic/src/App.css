@@ -64,6 +64,7 @@ h2 {
   padding-top: 1vh;
   color: var(--text-main);
   font-size: 3rem;
+  text-align: center;
 }
 
 h3 {
@@ -300,7 +301,6 @@ a:hover {
 
 .link-text-login {
   font-size: 2rem;
-
   position: absolute;
   right: 15vw;
   text-align: right;
@@ -518,4 +518,8 @@ td {
 .modal button {
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.text-centre {
+  text-align: center;
 }
