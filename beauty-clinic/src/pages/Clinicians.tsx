@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { ClinicianProfile } from "../components/CliniciansProfile";
 import { customFetch } from "../services/customFetch";
-
-export interface Clinician {
-  ID: number;
-  name: string;
-  title: string;
-  description: string;
-  image?: string;
-}
+import { Clinician } from "../model";
 
 export const Clinicians = () => {
   const [clinicians, setClinicians] = useState<Clinician[]>([]);
 
   async function fetchData() {
-    const data = await customFetch("http://localhost:3000/api/clinicians");
+    const data = await customFetch("api/clinicians");
     if (data) {
       setClinicians(data);
       console.info(data);

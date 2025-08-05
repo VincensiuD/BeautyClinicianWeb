@@ -19,7 +19,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("triggered");
     const storageRoleID: string | null = localStorage.getItem("RoleID");
     const storageName: string | null = localStorage.getItem("Name");
     storageRoleID ? setRoleID(parseInt(storageRoleID, 10)) : null;

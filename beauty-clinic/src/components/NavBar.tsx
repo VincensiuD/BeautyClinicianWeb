@@ -18,7 +18,7 @@ export const NavBar = () => {
           Hello, {name.trim().split(/\s+/)[0]}
         </span>
       ) : (
-        <Link to="/login" className={"link-text-login"}>
+        <Link to="/login" className={"link-text"}>
           Login
         </Link>
       )}
